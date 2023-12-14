@@ -9,7 +9,7 @@
         }
 
         .left {
-            width: 20%;
+            width: 10%;
             background-color: gray;
             color: white;
             text-align: left;
@@ -17,15 +17,28 @@
         }
 
         .right {
-            width: 80%;
+            width: 90%;
             background-color: lightblue;
             color: black;
             text-align: left;
             padding: 10px;
         }
 
+        .additional-info {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+
         img {
             width: 100%;
+        }
+
+        h1 {
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -43,8 +56,43 @@
                 They may ride just for fun, for exercise, for transportation, or for the sport of racing. To learn more
                 about bicycling, you can go to a bike shop, find a cycling club, go to the library, or check the
                 Internet.</p>
+
+            <div class="additional-info" id="additionalInfo" style="display: block;">
+                <p>Prior to beginning this badge, adults helping girls are required to review AHG's Health and Safety
+                    Policies and Guidelines.</p>
+                <p><strong>Did the helping adult review AHG's Health and Safety Policies and Guidelines?</strong></p>
+
+                <label for="reviewCheckbox">Yes</label>
+                <input type="checkbox" id="reviewCheckbox">
+
+                <label for="noReviewCheckbox">No</label>
+                <input type="checkbox" id="noReviewCheckbox">
+
+                <button onclick="checkReview()">Submit</button>
+            </div>
+
         </div>
     </div>
+
+    <script>
+        function checkReview() {
+            var reviewCheckbox = document.getElementById("reviewCheckbox");
+            var noReviewCheckbox = document.getElementById("noReviewCheckbox");
+            var additionalInfo = document.getElementById("additionalInfo");
+
+            if (reviewCheckbox.checked && noReviewCheckbox.checked) {
+                // If both 'Yes' and 'No' are checked, show an error message
+                alert("Please select either 'Yes' or 'No', not both.");
+            } else if (reviewCheckbox.checked) {
+                // If 'Yes' is checked, show the additional info block
+                additionalInfo.style.display = "block";
+            } else if (noReviewCheckbox.checked) {
+                // If 'No' is checked, show a message
+                alert("Please ask your helping adult to review AHG's Health and Safety Policies and Guidelines");
+            }
+        }
+
+    </script>
 </body>
 
 </html>
