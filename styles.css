@@ -36,3 +36,28 @@ img {
 h1 {
     text-transform: uppercase;
 }
+
+/* Add styles for task blocks */
+.task-block {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.task-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-block li {
+    margin-bottom: 10px;
+}
+
+.task-block label {
+    display: block;
+}
+
+.task-block input {
+    margin-right: 5px;
+}
