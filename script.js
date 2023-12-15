@@ -1,5 +1,5 @@
 
-// Cache elements
+
 var reviewCheckbox = document.getElementById("reviewCheckbox");
 var noReviewCheckbox = document.getElementById("noReviewCheckbox");
 var additionalInfo = document.getElementById("additionalInfo");
@@ -10,13 +10,13 @@ var explorer = document.getElementById("explorer");
 var tenderheartBlock = document.getElementById("tenderheartBlock");
 var explorerBlock = document.getElementById("explorerBlock");
 
-// Event listener registration
+
 reviewCheckbox.addEventListener("change", toggleAdditionalInfo);
 noReviewCheckbox.addEventListener("change", toggleAdditionalInfo);
 tenderheart.addEventListener("change", toggleTaskBlocks);
 explorer.addEventListener("change", toggleTaskBlocks);
 
-// Event handler functions
+
 function checkReview() {
     if (reviewCheckbox.checked && noReviewCheckbox.checked) {
         alert("Please select either 'Yes' or 'No', not both.");
